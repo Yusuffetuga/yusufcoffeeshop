@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu - Yusuf Cafe</title>	
+        <link href="Style.css" rel="stylesheet" type="text/css">
+</head> 	
+
+
+<body>
+
+<div id= "header">
+	
+<img class="logo" src="image/Logo.png" width="100" height="100" alt="Logo"/>
+	
+<h1><em>Yusuf Cafe</em></h1>
+</div>
+	
+	
+	  <div id="navbar">
+		 <li> <a href= "index.html">HOME</a> </li>
+		<li> <a href= "menu.html">MENU</a></li>
+		<li><a href= "photo gallery.html">PHOTO GALLERY</a> </li>
+		<li> <a href="About Us.html">ABOUT US</a> </li>
+	   <li> <a href= "Map.html">MAP</a></li>
+       
+	</div>
+ 	<div>
+  <div id="PhotoGallery">
+    <div id="PhotoGalleryText">
+      <h1>PHOTO GALLERY:</h1>
+      <div>
+        <ul> 
+          <li>Espresso Machine</li>
+          <li>Pastries</li>
+          <li>Group Drinking</li>
+          <li>Sandwiches</li>
+        </ul> 
+      </div>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="image/Espresso Machine.webp" style="width:100%">
+          <div class="text">Espresso Machine</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="image/Pastries.jpg" style="width:100%">
+          <div class="text">Pastries</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="image/people drinking coffee.webp" style="width:100%">
+          <div class="text">People drinking</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="image/Sandwiches.jpg" style="width:100%">
+          <div class="text">Sandwiches</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+	<div id="footer">
+		<div id="contact">
+		<p>
+		Contact Details:<br>
+		Opening hours: everyday from 6am to 8pm<br>
+       Address:Henry Street,Dublin 01,Ireland<br>
+		</p>
+			</div>
+			
+			<div id="copyright">
+		 ©Yusuf Cafe 2024 All Right reserved
+				</div>
+					<div id="social"
+						 <ion-icon name="logo-facebook"></ion-icon>
+						 
+	                   <a href="https://ionic.io/ionicons"> <ion-icon name="logo-facebook"></ion-icon></ion-icon></a>
+						  
+					<a href="https://ionic.io/ionicons"> <ion-icon name="logo-instagram"></ion-icon></ion-icon></a>
+					
+	
+					<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</div>
+
+
+    
+</body>
+</html>
